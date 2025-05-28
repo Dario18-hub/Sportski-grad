@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sportski klubovi u Rijeci</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: auto;
+    }
+
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #005baa;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004080;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Odaberi sportski klub</h1>
+
+  <div class="container">
+    <label for="clubSelector">Klub:</label>
+    <select id="clubSelector">
+      <option value="orijent.html">HNK Orijent 1919 (Nogomet)</option>
+      <option value="zamet.html">RK Zamet (Rukomet)</option>
+      <option value="primorje.html">VK Primorje EB (Vaterpolo)</option>
+    </select>
+
+    <button onclick="goToClub()">Idi na stranicu kluba</button>
+  </div>
+
+  <script>
+    function goToClub() {
+      const selectedPage = document.getElementById("clubSelector").value;
+      window.location.href = selectedPage;
+    }
+  </script>
+
+</body>
+</html>
